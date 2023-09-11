@@ -1,7 +1,7 @@
 const { spawn } = require('child_process');
 
 module.exports = async (req, res) => {
-  const process = spawn('python', ['your_flask_app.py']);
+  const process = spawn('python', ['app.py']);
 
   process.stdout.on('data', (data) => {
     res.status(200).send(data.toString());

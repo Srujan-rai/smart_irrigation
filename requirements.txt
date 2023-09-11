@@ -1,0 +1,5 @@
+pandas
+joblib
+Flask
+render_template
+request

@@ -1,5 +1,3 @@
+Flask==2.1.1
+joblib==1.0.1
 pandas
-joblib
-Flask
-render_template
-request

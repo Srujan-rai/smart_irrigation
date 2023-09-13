@@ -5,7 +5,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load the trained model
-model = joblib.load('your_saved_model.pkl')  # Replace with your model path
+model = joblib.load('logistic_regression_model.pkl')
 
 @app.route('/', methods=['GET', 'POST'])
 def predict():
@@ -32,4 +32,4 @@ def predict():
     return render_template('index.html', prediction=None)
 
 if __name__ == '__main__':
-    app.run(debug=False,host='0.0.0.0')
+    app.run(debug=True)

@@ -4,11 +4,13 @@ import pandas as pd
 # Load the trained model
 model = joblib.load('logistic_regression_model.pkl')
 
-# Input new data
+temperature=float(input("enter the temperature"))
+humidity=float(input("enter the humidity"))
+soil_moisture=float(input("enter the soil_moisture"))
 new_data = {
-    'temperature': 40,
-    'humidity': 0,
-    'soil_moisture': 25
+    'temp': temperature,
+    'humidity': humidity,
+    'soil_moisture': soil_moisture
 }
 
 # Prepare the input data as a DataFrame

@@ -10,13 +10,13 @@ model = joblib.load('logistic_regression_model.pkl')
 @app.route('/', methods=['GET', 'POST'])
 def predict():
     if request.method == 'POST':
-        temperature = float(request.form['temperature'])
+        temp = float(request.form['temperature'])
         humidity = float(request.form['humidity'])
         soil_moisture = float(request.form['soil_moisture'])
 
         # Prepare the input data as a DataFrame
         input_data = pd.DataFrame({
-            'temperature': [temperature],
+            'temp': [temp],
             'humidity': [humidity],
             'soil_moisture': [soil_moisture]
         })

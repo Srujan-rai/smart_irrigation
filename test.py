@@ -1,9 +1,6 @@
 import joblib
 import pandas as pd
-
-
 model = joblib.load('logistic_regression_model.pkl')
-
 temperature=float(input("enter the temperature"))
 humidity=float(input("enter the humidity"))
 soil_moisture=float(input("enter the soil_moisture"))

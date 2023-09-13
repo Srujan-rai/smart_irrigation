@@ -4,7 +4,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-# Load the trained model
+
 model = joblib.load('logistic_regression_model.pkl')
 
 @app.route('/', methods=['GET', 'POST'])
@@ -21,10 +21,9 @@ def predict():
             'soil_moisture': [soil_moisture]
         })
 
-        # Make predictions
+
         prediction = model.predict(input_data)
 
-        # Interpret the prediction
         pump_status = 'ON' if prediction[0] == 1 else 'OFF'
 
         return render_template('index.html', prediction=pump_status)

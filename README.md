@@ -1,4 +1,4 @@
-#   sjsFlask Pump Control System
+#   Flask Pump Control System
 
 This is a Flask application for a simple pump control system that predicts whether to turn a pump ON or OFF based on input data such as temperature, humidity, and soil moisture. The prediction is made using a pre-trained logistic regression model.
 
